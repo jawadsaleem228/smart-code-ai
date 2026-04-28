@@ -1,0 +1,202 @@
+<!-- public/index.html -->
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>SmartCode AI Studio</title>
+
+<link rel="stylesheet"
+href="style.css">
+
+</head>
+
+<body>
+
+<div class="hero">
+
+<h1>
+⚡ SmartCode AI Studio
+</h1>
+
+<p>
+AI Powered Code Reviewer
+& Bug Explainer
+</p>
+
+<button onclick="toggleMode()">
+
+🌙 Toggle Mode
+
+</button>
+
+</div>
+
+<div class="container">
+
+<div class="left">
+
+<h2>
+🧠 Input Workspace
+</h2>
+
+<textarea id="code">
+
+import math
+
+password = "123"
+
+def test(a,b)
+
+    return a+b
+
+eval("print('hack')")
+
+</textarea>
+
+<button onclick="reviewCode()">
+
+🚀 Run Smart Analysis
+
+</button>
+
+<button onclick="downloadReport()">
+
+📥 Download Report
+
+</button>
+
+<div id="loading"></div>
+
+</div>
+
+<div class="right">
+
+<h2>
+📊 Dashboard Output
+</h2>
+
+<div class="tabs">
+
+<button onclick="showTab('report')">
+
+📋 Report
+
+</button>
+
+<button onclick="showTab('bugs')">
+
+🐞 Bugs
+
+</button>
+
+<button onclick="showTab('metrics')">
+
+📊 Metrics
+
+</button>
+
+<button onclick="showTab('optimized')">
+
+⚡ Optimized
+
+</button>
+
+</div>
+
+<div id="report"
+class="tab-content">
+
+<div class="card">
+
+<h3>
+📋 Full Report
+</h3>
+
+<div id="fullReport"></div>
+
+</div>
+
+<div class="card">
+
+<h3>
+AI Analysis
+</h3>
+
+<pre id="aiReview"></pre>
+
+</div>
+
+</div>
+
+<div id="bugs"
+class="tab-content">
+
+<div class="card">
+
+<h3>
+🐞 Issues
+</h3>
+
+<div id="issues"></div>
+
+</div>
+
+</div>
+
+<div id="metrics"
+class="tab-content">
+
+<div class="card">
+
+<h3>
+📊 Metrics
+</h3>
+
+<p id="language"></p>
+
+<p id="complexity"></p>
+
+<p id="score"></p>
+
+<div id="severity"></div>
+
+</div>
+
+</div>
+
+<div id="optimized"
+class="tab-content">
+
+<div class="card">
+
+<h3>
+⚡ Optimized Code
+</h3>
+
+<pre id="optimizedCode"></pre>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<footer>
+
+Developed by Jawad
+| BS-IT Department
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
